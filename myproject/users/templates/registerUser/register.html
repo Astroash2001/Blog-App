@@ -1,0 +1,14 @@
+{%extends 'layout.html'%}
+
+{%block title%}
+    Register a New user
+{% endblock %}
+
+{%block content%}
+    <h1> Register a New user</h1>
+    <form class = "form-width-validation" action="{%url 'users:register'%}" method = "post">
+        {% csrf_token %}
+        {{form}}
+        <button>Submit</button>
+    </form>
+{% endblock %}
