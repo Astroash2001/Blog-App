@@ -13,14 +13,22 @@
       <a href="/">
        <span role ="img" aria-label = "Home" title = "Home">🏠</span> 
       </a> |
-      <a href="/about">😀</a> |
-      <a href="{%url 'posts:list'%}">📰</a> |
+      <a href="/about">
+        <span role ="img" aria-label = "About" title = "About">
+          😀
+        </span> 
+      </a> |
+      <a href="{%url 'posts:list'%}">
+         <span role ="img" aria-label = "Post" title = "Post">
+          📰
+         </span>
+      </a> |
       <!-- in the last anchor tag above we are refering 
        to the url file and in there we want the url named 
        posts-->
       {% if user.is_authenticated%}
           <a href="{%url 'posts:new-post'%}">
-            <span role = 'img' aria-label = "New Post">
+            <span role = 'img' aria-label = "New Post" title = "New Post">
               🆕
             </span>
           </a> |
@@ -32,12 +40,12 @@
           </form>
       {% else %}
            <a href="{%url 'users:register'%}">
-        <span role ='img' aria-label = "User Registration">
+        <span role ='img' aria-label = "User Registration" title = "User Registration">
           🚀
         </span>
        </a> |
        <a href="{%url 'users:login'%}">
-        <span role = 'img' aria-label = "User Login">
+        <span role = 'img' aria-label = "User Login" title = "User Login"> 
           🪪
         </span>
        </a> 
